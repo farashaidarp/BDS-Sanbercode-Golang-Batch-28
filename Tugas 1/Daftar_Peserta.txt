@@ -1,0 +1,6 @@
+Data Peserta Bootcamp Digital Skill - Golang Backend Development
+1. Nama: Faras Haidar Pratama
+2. Email: Farashp23@gmail.com
+3. Sistem Operasi yang digunakan: Windows
+4. Akun Github: farashp
+5. Akun Telegram: @farashaidarp
