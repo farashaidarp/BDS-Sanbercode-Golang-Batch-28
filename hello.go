@@ -2,15 +2,23 @@ package main
 
 import "fmt"
 
-func buahFavorit(name string, buah ...string) {
- fmt.Printf("halo " + " nama saya " + name + " dan buah favorit saya adalah ")
-	for _, buah := range buah {
-		fmt.Printf(buah + " ")
-	}
-}
-
 func main() {
-	var buah = []string{"semangka", "jeruk", "melon", "pepaya"}
-	buahFavorit("John", buah...)
-	// soal 4
+	var sayuran = []string{"Bayam", "Buncis", "Kangkung", "Kubis", "seledri", "Tuage", "Timun"}
+	p := &sayuran
+
+	fmt.Println("Element 0: ", (*p)[0])
+
+	fmt.Println("List of Elements")
+	for i := 0; i < len(sayuran); i++ {
+		fmt.Print((*p)[i], "  ")
+	}
+
+	fmt.Println("\nList of Elements")
+	for index, value := range *p {
+		fmt.Println(index + 1, value)
+	}
+
+	
+
+
 }
