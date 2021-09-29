@@ -1,24 +1,30 @@
 package main
 
-import "fmt"
+import (
+        "fmt"
+)
+
+type MyBoxItem struct {
+        Name string
+}
+
+type MyBox struct {
+        Items []MyBoxItem
+}
+
+func (box *MyBox) AddItem(item MyBoxItem) []MyBoxItem {
+        box.Items = append(box.Items, item)
+        return box.Items
+}
 
 func main() {
-	var sayuran = []string{"Bayam", "Buncis", "Kangkung", "Kubis", "seledri", "Tuage", "Timun"}
-	p := &sayuran
 
-	fmt.Println("Element 0: ", (*p)[0])
+        item1 := MyBoxItem{Name: "Test Item 1"}
 
-	fmt.Println("List of Elements")
-	for i := 0; i < len(sayuran); i++ {
-		fmt.Print((*p)[i], "  ")
-	}
+        items := []MyBoxItem{}
+        box := MyBox{items}
 
-	fmt.Println("\nList of Elements")
-	for index, value := range *p {
-		fmt.Println(index + 1, value)
-	}
+        box.AddItem(item1)
 
-	
-
-
+        fmt.Println(box.Items)
 }
